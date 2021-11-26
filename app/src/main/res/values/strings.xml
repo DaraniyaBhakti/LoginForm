@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TatvasoftAssignment1</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Font -->
+    <string name="roboto_regular">sans-serif</string>
+    <string name="roboto_light">sans-serif-light</string>
+    <string name="roboto_condensed">sans-serif-condensed</string>
+    <string name="roboto_thin">sans-serif-thin</string>
+    <string name="roboto_medium">sans-serif-medium</string>
+
+    <string name="number_picker_formatter">%02d</string>
+    <string name="connect_to_school">Connect To School</string>
+    <string name="login">LOGIN</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="register">REGISTER</string>
+    <string name="form_connect_to_school">Connect to School</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_contact_no">Enter Contact No.</string>
+    <string name="select_age">Select Age</string>
+    <string name="save">SAVE</string>
+    <string name="top_view">TOP VIEW</string>
+    <string name="leftview_1">LeftView 1</string>
+    <string name="rightview_1">RightView 1</string>
+    <string name="center_view">CENTER VIEW</string>
+    <string name="leftview_2">LeftView 2</string>
+    <string name="rightview_2">RightView 2</string>
+    <string name="bottom_view">BOTTOM VIEW</string>
+</resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <include layout="@layout/custom_toolbar"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.375"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.625"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80"/>
+
+    <Button
+        android:id="@+id/topViewBtn"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/colorPrimary"
+        android:onClick="clickTopViewBtn"
+        android:focusable="true"
+        android:text="@string/top_view"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <TextView
+        android:id="@+id/lv1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/blue_A400"
+        android:gravity="center"
+
+        android:text="@string/leftview_1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/topViewBtn" />
+
+    <TextView
+        android:id="@+id/rv1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/yellow_600"
+        android:gravity="center"
+        android:text="@string/rightview_1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintLeft_toRightOf="@id/guideline1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topViewBtn" />
+
+    <TextView
+        android:id="@+id/tvUpLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/blue_A400"
+        app:layout_constraintTop_toBottomOf="@id/guideline3"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/centerViewBtn"/>
+
+    <TextView
+        android:id="@+id/tvDownLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/yellow_600"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/centerViewBtn"
+        app:layout_constraintTop_toBottomOf="@id/guideline4" />
+
+    <Button
+        android:id="@+id/centerViewBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:onClick="clickCenterViewBtn"
+        android:text="@string/center_view"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"
+        app:layout_constraintLeft_toRightOf="@id/tvUpLeft"
+        app:layout_constraintRight_toLeftOf="@id/tvUpRight"
+        app:layout_constraintTop_toBottomOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/tvUpRight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/yellow_600"
+        app:layout_constraintTop_toBottomOf="@id/guideline3"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/centerViewBtn"/>
+
+    <TextView
+        android:id="@+id/tvDownRight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/blue_A400"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"
+        app:layout_constraintLeft_toRightOf="@id/centerViewBtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline4" />
+
+    <TextView
+        android:id="@+id/lv2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/yellow_600"
+        android:gravity="center"
+        android:text="@string/leftview_2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/bottomViewBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/guideline5" />
+
+    <TextView
+        android:id="@+id/rv2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/blue_A400"
+        android:gravity="center"
+        android:text="@string/rightview_2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/bottomViewBtn"
+        app:layout_constraintLeft_toRightOf="@id/guideline1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline5" />
+
+    <Button
+        android:id="@+id/bottomViewBtn"
+        android:text="@string/bottom_view"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/guideline6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="clickBottomViewBtn"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
