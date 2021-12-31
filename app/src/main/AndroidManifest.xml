@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TatvasoftAssignment1">
         <activity android:name=".LoginFormActivity"></activity>
-        <activity android:name=".LoginScreen">
+        <activity android:name=".LoginScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

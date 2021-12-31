@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginScreen">
+    tools:context=".LoginScreenActivity">
 
     <include layout="@layout/custom_toolbar"/>
     <androidx.constraintlayout.widget.Guideline
@@ -27,7 +27,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="@dimen/imageMarginBottom"
         app:layout_constraintBottom_toTopOf="@id/guideline7"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -37,60 +37,36 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
         android:text="@string/connect_to_school"
-        android:textColor="@color/black"
-        android:textSize="28dp"
-        android:typeface="sans"
-
         app:layout_constraintBottom_toTopOf="@id/guideline7"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        style="@style/styleConnectSchool" />
 
     <TextView
         android:id="@+id/tvTerms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:gravity="center_horizontal"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        android:textAlignment="center"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginRight="34dp"
-        android:layout_marginLeft="34dp"
         app:layout_constraintBottom_toTopOf="@id/loginBtn"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline8" />
+        app:layout_constraintTop_toBottomOf="@id/guideline8"
+        style="@style/styleTvTerms" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/round_button"
         android:text="@string/login"
-        android:textColor="@color/white"
-        android:textSize="12dp"
         app:layout_constraintBottom_toTopOf="@id/tvCreate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTerms" />
+        app:layout_constraintTop_toBottomOf="@id/tvTerms"
+        style="@style/styleLoginbtn" />
 
     <TextView
         android:id="@+id/tvCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_a_new_account"
-        android:textSize="10dp"
+        android:textSize="@dimen/textSize10sp"
         app:layout_constraintBottom_toTopOf="@id/tvRegister"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -99,28 +75,18 @@
 
     <TextView
         android:id="@+id/tvRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:layout_marginTop="5dp"
         android:text="@string/register"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@id/tvFooter"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvCreate" />
+        app:layout_constraintTop_toBottomOf="@id/tvCreate"
+        style="@style/styleTvRegister" />
 
     <TextView
         android:id="@+id/tvFooter"
-        android:layout_width="0dp"
-        android:layout_height="23dp"
-        android:gravity="center"
-        android:layout_marginBottom="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRegister"
+        style="@style/styleTvFotter" />
 </androidx.constraintlayout.widget.ConstraintLayout>

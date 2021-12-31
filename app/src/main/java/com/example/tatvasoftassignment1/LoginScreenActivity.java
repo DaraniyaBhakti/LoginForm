@@ -1,16 +1,13 @@
 package com.example.tatvasoftassignment1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class LoginScreen extends BaseActivity {
+public class LoginScreenActivity extends BaseActivity {
 
     TextView tvTerms,tvFooter,tvRegister;
     Button loginBtn;
@@ -35,14 +32,14 @@ public class LoginScreen extends BaseActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginScreen.this,MainActivity.class);
+                Intent intent = new Intent(LoginScreenActivity.this,MainActivity.class);
                 startActivity(intent);
             }
         });
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginScreen.this,LoginFormActivity.class);
+                Intent intent = new Intent(LoginScreenActivity.this,LoginFormActivity.class);
                 startActivity(intent);
             }
         });

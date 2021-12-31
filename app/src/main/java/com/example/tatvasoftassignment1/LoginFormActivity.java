@@ -15,9 +15,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.NumberPicker;
 import android.widget.Toast;
-
-import com.shawnlin.numberpicker.NumberPicker;
 
 import java.util.Locale;
 import java.util.regex.Pattern;
@@ -27,10 +26,11 @@ import static android.widget.Toast.*;
 
 public class LoginFormActivity extends BaseActivity {
 
-    EditText etUsername,etEmail,etPassword,etContactNo,etAge;
-    Button btnSave;
+    private EditText etUsername,etEmail,etPassword,etContactNo,etAge;
+    private Button btnSave;
     private int value;
-    LinearLayout linearLayout;
+    private NumberPicker numberPicker;
+    private LinearLayout linearLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +45,7 @@ public class LoginFormActivity extends BaseActivity {
         etAge = (EditText)findViewById(R.id.etAge);
         btnSave = (Button)findViewById(R.id.btnSave);
         linearLayout=findViewById(R.id.linerLayout);
+        numberPicker=(NumberPicker)findViewById(R.id.number_picker);
 
 
         etAge.setOnClickListener(new View.OnClickListener() {
@@ -122,7 +123,6 @@ public class LoginFormActivity extends BaseActivity {
 
     private void numberPicker( ){
 
-        NumberPicker numberPicker = (NumberPicker) findViewById(R.id.number_picker);
         ViewGroup.LayoutParams params =linearLayout.getLayoutParams();
 
         params.height=300;
@@ -130,25 +130,13 @@ public class LoginFormActivity extends BaseActivity {
         linearLayout.setLayoutParams(params);
         numberPicker.setVisibility(View.VISIBLE);
 
-// Set divider color
-        numberPicker.setDividerColor(ContextCompat.getColor(this, R.color.colorPrimary));
-        numberPicker.setDividerColorResource(R.color.colorPrimary);
 // Set value
         numberPicker.setMaxValue(70);
         numberPicker.setMinValue(0);
         numberPicker.setValue(10);
 
-// Set fading edge enabled
-        numberPicker.setFadingEdgeEnabled(true);
-
-// Set scroller enabled
-        numberPicker.setScrollerEnabled(true);
-
 // Set wrap selector wheel
         numberPicker.setWrapSelectorWheel(true);
-
-// Set accessibility description enabled
-        numberPicker.setAccessibilityDescriptionEnabled(true);
 
 // OnClickListener
         numberPicker.setOnClickListener(new View.OnClickListener() {
